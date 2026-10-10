@@ -1,0 +1,1 @@
+export default function AlertCard({alert}){return <article className="alert-card"><span className={`priority ${String(alert.priority).toLowerCase()}`}>{alert.priority}</span><div><h3>{alert.title}</h3><p>{alert.description}</p><p className="muted">{alert.location} · {new Date(alert.createdAt).toLocaleString()}</p></div><span className="status">{alert.status}</span></article>}

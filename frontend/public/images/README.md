@@ -1,0 +1,1 @@
+Place licensed image assets here using descriptive names, e.g. hyderabad-hero.webp, waterlogging-demo.webp, pothole-demo.webp, garbage-demo.webp, streetlight-demo.webp, citypulse-logo.svg. This starter uses an original CSS heritage illustration on the home page and does not reference missing image files. Do not present stock/demo images as citizen-submitted report evidence.

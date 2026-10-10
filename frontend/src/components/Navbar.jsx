@@ -1,0 +1,3 @@
+import {NavLink,Link} from 'react-router-dom';
+const links=[['Home','/'],['Live Map','/map'],['Alerts','/alerts'],['Sensors','/sensors'],['App','/app'],['Resources','/resources'],['Guidelines','/guidelines'],['Contact','/contact'],['Dashboard','/dashboard'],['Admin','/admin']];
+export default function Navbar(){return <header className="topbar"><Link className="brand" to="/"><span className="brand-mark">CP</span><span>CityPulse <small>HYDERABAD</small></span></Link><nav>{links.map(([label,to])=><NavLink end={to==='/'} key={to} to={to}>{label}</NavLink>)}</nav><Link className="nav-report" to="/report">+ Report</Link></header>}

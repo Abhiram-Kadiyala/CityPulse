@@ -1,0 +1,1 @@
+import {Router} from 'express';import {listAlerts,getAlert,createAlert,updateAlert} from '../controllers/alertController.js';import {protect,adminOnly} from '../middleware/authMiddleware.js';const r=Router();r.get('/',listAlerts);r.get('/:id',getAlert);r.post('/',protect,adminOnly,createAlert);r.patch('/:id',protect,adminOnly,updateAlert);export default r;

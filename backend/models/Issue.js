@@ -1,0 +1,4 @@
+import mongoose from 'mongoose';
+const issueSchema=new mongoose.Schema({title:{type:String,required:true,trim:true,maxlength:120},category:{type:String,enum:['Waterlogging','Potholes','Streetlight failure','Drainage','Garbage','Traffic','Other'],required:true},description:{type:String,required:true,maxlength:3000},location:{type:String,required:true},coordinates:{lat:{type:Number,required:true,min:-90,max:90},lng:{type:Number,required:true,min:-180,max:180}},priority:{type:String,enum:['Low','Medium','High','Critical'],default:'Medium'},status:{type:String,enum:['Pending','In Progress','Resolved'],default:'Pending'},photoPath:String,contactPhone:{type:String,select:false,maxlength:20,trim:true},reportedBy:{type:mongoose.Schema.Types.ObjectId,ref:'User'},adminNotes:{type:String,default:'',maxlength:1000}},{timestamps:true});
+issueSchema.index({createdAt:-1});
+export default mongoose.model('Issue',issueSchema);
